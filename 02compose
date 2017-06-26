@@ -1,0 +1,5 @@
+#!/bin/bash
+
+docker-compose -f docker-compose_sqoop.yml up -d hive-metastore-postgresql
+docker-compose -f docker-compose_sqoop.yml up -d hive-metastore
+docker-compose -f docker-compose_sqoop.yml up -d hive-server

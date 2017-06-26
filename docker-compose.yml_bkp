@@ -10,9 +10,6 @@ services:
       - CLUSTER_NAME=test
     env_file:
       - ./hadoop-hive.env
-    ports:
-      - "50070:50070"
-      - "8020:8020"
 
   resourcemanager:
     image: bde2020/hadoop-resourcemanager:1.1.0-hadoop2.8-java8

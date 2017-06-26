@@ -1,0 +1,14 @@
+#!/bin/bash
+
+echo Contenedores
+export conts=`sudo docker ps | cut -d' ' -f1 | grep -v CONTAINER | tr '\n' ' '`
+echo  $conts
+sudo docker stop $conts
+sudo docker rm $conts
+
+echo Contenedores detenidos
+export conts=`sudo docker ps -f "status=exited" | cut -d' ' -f1 | grep -v CONTAINER | tr '\n' ' '`
+echo  $conts
+sudo docker rm $conts
+
+
