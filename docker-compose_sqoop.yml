@@ -24,7 +24,8 @@ services:
       - datanode3
     env_file:
       - ./hadoop-hive.env
-
+    ports:
+      - "8088:8088"
 
   historyserver:
     image: bde2020/hadoop-historyserver:1.1.0-hadoop2.8-java8
@@ -38,6 +39,9 @@ services:
       - hadoop_historyserver:/hadoop/yarn/timeline
     env_file:
       - ./hadoop-hive.env
+    ports:
+      - "10020:10020"
+      - "19888:19888"
 
   nodemanager1:
     image: bde2020/hadoop-nodemanager:1.1.0-hadoop2.8-java8
@@ -99,7 +103,7 @@ services:
 
   hive-server:
     #build: .
-    image: bde2020/hive
+    image: shanglai/hive-sqoop:latest  #bde2020/hive
     container_name: hive-server
     depends_on:
       - namenode

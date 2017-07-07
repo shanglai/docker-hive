@@ -1,0 +1,10 @@
+#!/bin/bash
+
+./lista-tablas $1 > tbl
+cat tbl | grep  -Ev "^tf.*posicion_nave$" | grep -v tf_foto_nave | grep -v tf_act_foto_nave > importar
+
+cat importar | parallel ./importa-una $1 {}
+
+rm tbl
+
+
