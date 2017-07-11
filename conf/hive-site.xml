@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?xml-stylesheet type="text/xsl" href="configuration.xsl"?><!--
+<?xml version</name><value>"1.0" encoding</name><value>"UTF-8" standalone</name><value>"no"?>
+<?xml-stylesheet type</name><value>"text/xsl" href</name><value>"configuration.xsl"?><!--
    Licensed to the Apache Software Foundation (ASF) under one or more
    contributor license agreements.  See the NOTICE file distributed with
    this work for additional information regarding copyright ownership.
@@ -21,4 +21,10 @@
 <property><name>javax.jdo.option.ConnectionDriverName</name><value>org.postgresql.Driver</value></property>
 <property><name>javax.jdo.option.ConnectionPassword</name><value>hive</value></property>
 <property><name>javax.jdo.option.ConnectionUserName</name><value>hive</value></property>
+
+<!--<property><name>spark.master</name><value>spark-master</value></property>
+<property><name>spark.eventLog.enabled</name><value>true</value></property>
+<property><name>spark.eventLog.dir</name><value>/tmp</value></property>
+<property><name>spark.executor.memory</name><value>1g</value></property>
+<property><name>spark.serializer</name><value>org.apache.spark.serializer.KryoSerializer</value></property>-->
 </configuration>
