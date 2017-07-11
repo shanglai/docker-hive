@@ -1,0 +1,3 @@
+#!/bin/bash
+
+docker-compose -f docker-compose_sqoop.yml up -d hue-server
