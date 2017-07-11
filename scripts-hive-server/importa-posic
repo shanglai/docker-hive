@@ -1,0 +1,6 @@
+#!/bin/bash
+
+echo ">>>>>>>>>Importando $1.$2"
+$SQOOP_HOME/bin/sqoop-import --connect jdbc:postgresql://192.168.22.104:5432/$1 --table $2 --columns tfposnavecorrsistfte,tgasocididmaster,tgftesistidfte,tfposnavecorrorigen,tfposnaveprimfechcontacto,tgdimdatekey,tgdimtimekey,tfposnavefechregistro,tfposnavenumact,tfposnaveposilatitud,tfposnaveposilatitudmv,tfposnaveposilongitud,tfposnaveposilongitudmv,tfposnaverumbo,tfposnaverumbomv,tfposnaveheading,tfposnaveheadingmv,tfposnavevelocidad,tfposnavevelocidadmv,tfposnavealtitud,tfposnavealtitudmv,tfposnavecaladorepo,tfposnavecaladorepomv,tfposnaverotaais,tfposnaverotaaismv,tfposnaveestnaveg,tcestnavid,tfposnaveestnavegmv,tfposnaveeta,tfposnaveetamv,tfposnaveorigen,stlocalptoorivjeid,tfposnaveorigenmv,tfposnavedestino,stlocalptodesvjeid,tfposnavedestinomv,tfposnavesensfte,tfposnavesensftemv,tfposnaveposicalidad,tfposnaveposicalidadmv,tfposnavearearep,stlitoralrepid,tfposnavearearepmv,tfposnavedataadic,tfposnavedataadicmv,tfposnaverawdata,tfposnaveestfusion,tfposnaveregobsoleto,tfposnavefechobsoleto --username postgres --password  admin01 --bindir $SQOOP_HOME/lib --hive-import --direct -m 1
+echo ">>>>>>>>>$1.$2 importada"
+
