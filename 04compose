@@ -1,0 +1,4 @@
+#!/bin/bash
+
+docker-compose -f docker-compose_spark.yml up -d spark-master spark-worker-1 spark-worker-2
+
