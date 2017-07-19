@@ -1,0 +1,25 @@
+version: "3"
+
+services:
+  namenode:
+    image: shanglai/namenode-sqoop:latest
+    container_name: namenode
+#    volumes:
+#      - ./data/namenode:/hadoop/dfs/name
+      
+    deploy:
+      placement:
+        constraints:
+          - node.labels.master  == yes
+          - node.labels.batch == yes
+    environment:
+      - CLUSTER_NAME=test
+    env_file:
+      - ./hadoop-hive.env
+    ports:
+      - "50070:50070"
+      - "8020:8020"
+
+#volumes:
+#  hadoop_namenode:./data/namenode
+

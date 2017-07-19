@@ -1,0 +1,21 @@
+#!/bin/bash
+
+docker network create --driver overlay bd
+docker node update --label-add nodeid=host1 avalon
+docker node update --label-add nodeid=host2 aztlan
+docker node update --label-add nodeid=host3 camelot
+docker node update --label-add nodeid=host4 irem
+docker node update --label-add master=yes avalon
+docker node update --label-add master=no aztlan
+docker node update --label-add master=no camelot
+docker node update --label-add master=no irem
+docker node update --label-add batch=yes avalon
+docker node update --label-add batch=yes aztlan
+docker node update --label-add batch=yes camelot
+docker node update --label-add batch=no irem
+docker node update --label-add mem=yes avalon
+docker node update --label-add mem=yes aztlan
+docker node update --label-add mem=yes camelot
+docker node update --label-add mem=no irem
+
+
